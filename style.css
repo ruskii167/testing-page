@@ -1,0 +1,46 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+
+}
+
+h1 {
+    color: navy;
+}
+
+h2 {
+
+color: darkgreen;
+}
+
+ul {
+    list-style-type: square;
+}
+
+form{
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+input, textarea {
+    width: 100%
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+button{
+    background-color: darkblue;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
