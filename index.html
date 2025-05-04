@@ -1,33 +1,128 @@
-<!DOCTYPE html> 
-<head>
+<!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-9">
-    <title>My Personal Page</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Hello, I'm Khumo Khomari</h1>
-        <p>I'm excited to start my coding journey!</p>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>My Personal Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <button  id="darkModeToggle" style="position: absolute; top: 20px; right: 20px; font-size: 18px;">
+  <i class="fas fa-moon"></i>
+</button>
+  <h1><i class="fa-solid fa-laptop-code"></i> Hello, <span class="typed-text"></span></h1>
+  <img src="chatgptavatar.png" alt="My Avatar" class="avatar">
+  <p>I'm excited to share my coding journey with you!</p>
 
-        <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/xldbgzov" method="POST">
-            <label for="name">Khumo Khomari</label><br>
-            <input type="text" id="name" placeholder="Type your name"><br><br>
+  <h2 class="fade-in" style="animation-delay: 0.3s;">Contact Me</h2>
+  <form action="https://formspree.io/f/xldbgzov" method="POST" class="contact-form" data-aos="fade-up" data-aos-delay="200">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" placeholder="Type Your Name" required>
 
-            <label for="message"> Your Message:</label><br>
-            <textarea id="message" name="message" rowa="4" cols="30" placeholder="Type your message"></textarea><br><br>
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Type Your Message" required></textarea>
 
-            <button type="submit">Send</button>
-        </form>
+    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+  </form>
 
-        <h3> My hobbies</h3>
-        <ul>
-            <li>Gaming</li>
-            <li>Photography</li>
-            <li>Car stuff</li>
-            </ul>
+  <h2 data-aos="fade-up"><i class="fas fa-gamepad"></i> Hobbies</h2>
+  <ul class="hobbies" data-aos="fade-up" data-aos-delay="200">
+    <li>Gaming</li>
+    <li>Photography</li>
+    <li>Car stuff</li>
+  </ul>
 
-            <h2>My Goals for this Coding Class</h2>
-            <p>I want to build cool apps and interactive websites!</p>
-    </body>
-    </html>
+  <section class="max-w-3xl mx-auto px-4 py-12 text-center">
+    <h2 class="text-3xl font-bold mb-4 fade-in" data-aos="fade-up">
+      <i class="fa-solid fa-rocket"></i> My Coding Goals
+    </h2>
+
+    <p class="text-Ig text-gray-700 leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+      My goal is to become a well-rounded full-stack developer—building sleek, high-performance apps and interactive websites that are both fun to use and built to last. I’m always sharpening my frontend skills with modern frameworks and smooth UI interactions, while also diving deeper into backend systems that handle data efficiently and scale with ease. I love turning ideas into polished digital experiences.
+    </p>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <script>
+
+    var typed = new Typed(".typed-text", {
+      strings: ["I'm Khumo Khomari.", "I'm a coder in training.", "Welcome to my website!"],
+      typeSpeed: 80,
+      backSpeed: 40,
+      backDelay: 1000,
+      startDelay: 500,
+      loop: true
+    });
+  </script>
+  <script>
+    const toggle = document.getElementById("darkModeToggle");
+    const icon = toggle.querySelector("i");
+
+    if (localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+    }
+
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+if (document.body.classList.contains("dark-mode")) {
+  icon.classList.remove("fa-moon");
+  icon.classList.add("fa-sun");
+  localStorage.setItem("darkMode", "enabled")
+} else {
+  icon.classList.remove("fa-sun");
+  icon.classList.add("fa-moon");
+  localStorage.setItem("darkMode", "disabled")
+}
+    });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+<div class="container" style="text-align: center;">
+  <section data-aos="fade-up">
+  <h2><i class="fas fa-user"></i> About Me:</h2>
+  <p> I've always had a fascination with technology — as a kid, I wanted to be a hacker. That curiosity led me to discover coding in 2022 during my CAT class, and I’ve been passionate about it ever since. What started as a class project quickly turned into a personal journey of building, breaking, and learning. Today, I focus on web development and game design, constantly exploring new tools, frameworks, and creative ideas. I enjoy turning concepts into functional, visually engaging experiences, and I'm always up for a challenge that helps me grow as a developer. Tech isn't just something I do — it's something I live for!</p>
+</section>
+</div>
+
+<div>
+<section data-aos="fade-up" data-aos-delay="200">
+  <h2><i class="fas fa-lightbulb"></i> My inspirations:</h2>
+  <p> Innovators like Ferruccio Lamborghini, Enzo Ferrari, Horacio Pagani, and Christian von Koenigsegg are a constant source of inspiration for me. Their relentless pursuit of perfection, unyielding passion, and bold vision in the world of automotive design have shaped my mindset. These legends didn’t just build cars — they built empires, defying the odds and creating timeless masterpieces that push the boundaries of engineering. Their stories remind me to dream big, work tirelessly, and never settle for anything less than extraordinary.</p>
+</section>
+</div>
+
+<div>
+<section data-aos="fade-up" data-aos-delay="400">
+  <h2><i class="fas fa-gamepad"></i> My Favourite Games:</h2>
+  <ul>
+    <li>GTA V</li>  
+    <li>Farcry 5 </li> 
+    <li>Uncharted</li> 
+    <li>Tomb Raider</li> 
+    <li>Gran Turismo</li> 
+    <li>Need For Speed</li> 
+    <li>Ratchet And Clank</li> 
+  </ul>
+</section>
+</div>
+
+<section data-aos="fade-up" data-aos-delay="600">
+<h2><i class="fas fa-spinner"></i> More Content Coming Soon...</h2>
+<p>I'm working on some cool features for the website, some apps, and maybe even a game page!</p>
+</section>
+
+</body>
+</html>

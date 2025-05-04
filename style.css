@@ -1,46 +1,174 @@
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-
+   background: linear-gradient(white);
+   font-family: "Open Sans", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   margin: 0;
+   padding: 0;
+   text-align: center;
 }
 
 h1 {
-    color: navy;
+    color: #333;
+    margin-top: 40px;
 }
 
-h2 {
-
-color: darkgreen;
-}
-
-ul {
-    list-style-type: square;
+p {
+    font-size: 18px;
+    color: #777;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 form{
-    background-color: #ffffff;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    max-width: 400px;
+margin-top: 30px;
 }
 
 input, textarea {
-    width: 100%
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #aaa;
-    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-button{
-    background-color: darkblue;
+button {
+    background-color: #0077ff;
     color: white;
-    padding: 8px 12px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
+button:hover {
+    background-color: #0655af;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.hobbies li:hover {
+    background-color: #0077ff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hobbies {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.hobbies li {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px 16px;
+    background-color: #7a7a7a;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+@media (max-width:600px) {
+    input, textarea {
+        width: 90%;
+    }
+    ul.hobbies li {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #1e1e1e, #424242);
+    color: white;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p {
+    color: white;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #333;
+    color: white;
+    border: 1px solid #777;
+}
+
+body.dark-mode .hobbies li {
+    background-color: #555;
+    color: white;
+}
+
+body.dark-mode button {
+    background-color: #444;
+}
+
+body.dark-mode button:hover {
+    background-color: #777;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in 1.5s ease-in forwards;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    cursor: auto;
+}
+
+    .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+        text-align: left;
+    }
+
+    section {
+        margin-bottom: 60px;
+    }
+
+    h2 {
+        margin-top: 40px;
+        color: #333;
+    }
+
+    ul {
+        padding-left: 20px;
+        list-style: none;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 20px auto;
+        display: block;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .typed-cursor {
+        display: none !important;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    label {
+        margin-top: 10px;
+        font-weight: bold;
+        display: block;
+    }
